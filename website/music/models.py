@@ -10,6 +10,8 @@ class Album(models.Model):
     genre = models.CharField(max_length=100)
     album_logo = models.CharField(max_length=1000)
     # link for logo
+    def __str__(self):
+        return self.artist+'-'+self.album_title
 
 
 class Song(models.Model):
