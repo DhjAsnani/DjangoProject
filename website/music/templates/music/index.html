@@ -1,20 +1,17 @@
-<!DOCTYPE html>
-<html>
-<head lang="en">
-    <meta charset="UTF-8">
-    <title></title>
-</head>
-<body>
-<ul>
+
+    {% load staticfiles %}
+    <link rel="stylesheet" type="text/css" href="{% static 'music/style.css' %}"/>
+
+
 
   {% if all_albums %}
     <h3>Your Albums</h3>
+    <ul>
     {% for album in all_albums %}
     <li><a href="{{ album.id }}">{{ album.album_title }}</a> </li>
     {% endfor %}
+        </ul>
   {% else %}
     <h3>You got No Albums Dude</h3>
   {% endif %}
-</ul>
-</body>
-</html>
+
