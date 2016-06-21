@@ -1,11 +1,19 @@
 
     {% load staticfiles %}
-    
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="{% static 'music/style.css' %}"/>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
 
+    <nav class="navbar navbar-default">
 
-
+        <div class="container-fluid">
+            <div class="navbar-header">
+                 <a href="{% url 'music:index' %}" class="navbar-brand">Django Musics</a>
+            </div>
+        </div>
+    </nav>
   {% if all_albums %}
     <h3>Your Albums</h3>
     <ul>
