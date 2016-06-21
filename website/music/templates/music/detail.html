@@ -19,6 +19,7 @@
 
         <label for="song{{ forloop.counter }}">
             {{ song.song_title }}
+            {{ song.is_favourite }}
             {% if song.is_favourite %}
                 <img src="http://i.imgur.com/b9b13Rd.png">
             {% endif %}
