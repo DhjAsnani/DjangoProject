@@ -8,6 +8,18 @@
 <img src="{{ album.album_logo }}" height="275px" width="275px">
 <h1>{{ album.album_title }}</h1>
 <h4>{{ album.artist }} - {{ album.genre }} </h4>
+{% if error_message %}
+    <p><strong>{{ error_message }}</strong></p>
+{% endif %}
+
+<form action="{% 'music:favourite' album.id %}">
+    
+</form>
+
+
+
+
+
 <ul>
 {% for song in album.song_set.all %}
     <li>{{ song.song_title }}.{{ song.file_type }}</li>
